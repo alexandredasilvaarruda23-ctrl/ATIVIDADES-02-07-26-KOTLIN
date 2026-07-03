@@ -1,0 +1,111 @@
+exercicio 1
+
+fun main() {
+    print("Didite um numero inteiro: ")
+    val numero = readLine()!!.toInt()
+
+    if (numero % 2 == 0) {
+        println("$numero é par")
+
+    } else {
+        println("$numero é impar")
+    }
+}
+
+
+C:\Users\Aluno\.jdks\openjdk-25.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.3\lib\idea_rt.jar=51277" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\Aluno\IdeaProjects\alexandre\out\production\alexandre;C:\Users\Aluno\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\2.3.0\kotlin-stdlib-2.3.0.jar;C:\Users\Aluno\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar MainKt
+Digite um número inteiro: 7
+7 é ímpar
+
+Process finished with exit code 0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+exercicio 2
+
+fun main() {
+    val numeros = listOf<Int>(7,12,77,55,40)
+
+    var maior = numeros[0]
+
+    for(numero in numeros){
+        if(numero > maior){
+            maior = numero
+        }
+    }
+
+        println("O maior valor é: ${maior}")
+    }
+
+C:\Users\Aluno\.jdks\openjdk-25.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.3\lib\idea_rt.jar=51847" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\Aluno\IdeaProjects\alexandre\out\production\alexandre;C:\Users\Aluno\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\2.3.0\kotlin-stdlib-2.3.0.jar;C:\Users\Aluno\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar MainKt
+O maior valor é: 77
+
+Process finished with exit code 0
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+exercicio 3
+
+fun main() {
+    val numeros = listOf(5,2,17,15,45)
+
+    var soma = 0
+
+    for(numero in numeros) {
+        if (numero > 10) {
+            soma += numero
+        }
+    }
+
+        println("A soma dos valores maiores que 10 é: $soma")
+    }
+
+
+C:\Users\Aluno\.jdks\openjdk-25.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.3\lib\idea_rt.jar=52116" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\Aluno\IdeaProjects\alexandre\out\production\alexandre;C:\Users\Aluno\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\2.3.0\kotlin-stdlib-2.3.0.jar;C:\Users\Aluno\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar MainKt
+A soma dos valores maiores que 10 é: 77
+
+Process finished with exit code 0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Bloco 2 — Lógica aplicadaExercício 4
+
+fun main() {
+    val precos = listOf(15.90, 22.50, 18.00, 8.75)
+
+    var total = 0.0
+    for (preco in precos) {
+        total += preco
+    }
+
+    if (total > 50.0) {
+        val desconto = total * 0.10
+        total -= desconto
+        println("Total com desconto de 10%%: R$ %.2f".format(total))
+    } else {
+        println("Total sem desconto: R$ %.2f".format(total))
+    }
+}
+
+
+C:\Users\Aluno\.jdks\openjdk-25.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.3\lib\idea_rt.jar=53317" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\Aluno\IdeaProjects\alexandre\out\production\alexandre;C:\Users\Aluno\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\2.3.0\kotlin-stdlib-2.3.0.jar;C:\Users\Aluno\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar MainKt
+Total com desconto de 10%: R$ 58,64
+
+Process finished with exit code 0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Bloco 3 — Primeira classeExercício 5 
+
+class Produto(
+    val nome: String,
+    val preco: Double,
+    val quantidadeEstoque: Int
+) {
+    fun exibir() {
+        println("Produto: R$ %.2f | Estoque: $quantidadeEstoque".format(preco))
+    }
+}
+    fun main() {
+        val produto = Produto("ARROZ", 8.50, 100)
+        produto.exibir()
+    }
+
+C:\Users\Aluno\.jdks\openjdk-25.0.2\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2025.3.3\lib\idea_rt.jar=53658" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\Aluno\IdeaProjects\alexandre\out\production\alexandre;C:\Users\Aluno\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\2.3.0\kotlin-stdlib-2.3.0.jar;C:\Users\Aluno\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar MainKt
+Produto: R$ 8,50 | Estoque: 100
+
+Process finished with exit code 0
+
+
